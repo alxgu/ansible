@@ -26,7 +26,7 @@ class CallbackModule(object):
                        os.getenv('SYSLOG_PORT',514)), 
             facility=logging.handlers.SysLogHandler.LOG_USER
         )
-        self.logger.addHandler(handler)
+        self.logger.addHandler(self.handler)
 
     def on_any(self, *args, **kwargs):
         pass
